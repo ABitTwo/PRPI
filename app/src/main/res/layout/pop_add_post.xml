@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+
+        android:background="#ffffff"
+        android:id="@+id/pop_imageuser"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/pop_descricao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pop_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:textColorHint="@color/black"
+        android:textColor="#000000"
+        android:id="@+id/pop_title"
+        android:background="@drawable/pop_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Titulo"
+        app:layout_constraintEnd_toStartOf="@+id/pop_imageuser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:textColorHint="@color/black"
+        android:textColor="#000000"
+        android:background="@drawable/pop_style"
+        android:id="@+id/pop_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Descrição"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pop_title" />
+
+    <ImageView
+        android:background="#2d2d2d"
+        android:id="@+id/pop_image"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pop_descricao"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/pop_Edit"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/edit_style"
+        android:padding="12dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/pop_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pop_image"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/pop_progres"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pop_Edit"
+        app:layout_constraintStart_toStartOf="@+id/pop_Edit"
+        app:layout_constraintTop_toTopOf="@+id/pop_Edit" />
+</androidx.constraintlayout.widget.ConstraintLayout>
